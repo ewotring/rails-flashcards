@@ -1,1 +1,16 @@
-<h3>I'm a card!</h3>
+
+<h2>Guess the Answer</h2>
+<h3 style="white-space: pre-wrap"><%= @card.question %></h3>
+
+<% if @attempted %>
+  <h4> The correct answer was:</h4>
+  <p><%= @card.answer %></p>
+  <%= link_to 'Next Question', @round %>
+<% else %>
+  <%= form_with model: [@card, @guess] do |form| %>
+    <%= form.label :answer %>
+    <%= form.text_field :answer %>
+    <%= form.submit %>
+  <% end %>
+
+<% end %>
