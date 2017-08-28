@@ -2,7 +2,7 @@
   <section class="deck_list">
     <% @decks.each do |deck| %>
       <section class="deck_list_item">
-        <%= link_to "#{deck.name}", "/decks/#{deck.id}/rounds", method: :POST %>
+        <%= link_to "#{deck.name}", deck_rounds_path(deck), method: :post %>
       </section>
     <% end %>
   </section>

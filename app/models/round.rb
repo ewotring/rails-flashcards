@@ -1,7 +1,7 @@
 class Round < ApplicationRecord
   has_many :guesses
   belongs_to :deck
-  belongs_to :user
+  belongs_to :player, class_name: User
   has_many :cards, through: :deck
 
   def accuracy
