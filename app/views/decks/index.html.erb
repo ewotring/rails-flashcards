@@ -1,0 +1,9 @@
+<% if @decks %>
+  <section class="deck_list">
+    <% @decks.each do |deck| %>
+      <section class="deck_list_item">
+        <%= link_to "#{deck.name}", "/decks/#{deck.id}/rounds", method: :POST %>
+      </section>
+    <% end %>
+  </section>
+<% end %>
