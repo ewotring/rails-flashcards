@@ -24,12 +24,18 @@ class Round < ApplicationRecord
   #These are the remaining guesses that need to be solved
     unsolved_guesses = self.guesses.select{ |guess| guess.solved == false}
     # unsolved_guesses = self.guesses.partition{ |guess| guess.solved == false}[0]
+    puts "These are unsolved_guesses:"
+    p unsolved_guesses
 
     #This is the lowest attempts count for unsolved guesses
     least_attempts_num = unsolved_guesses.map{|guess| guess.attempts}.sort.first
 
+    p least_attempts_num
+
     #This shows the next guess to solve, if there is one
     next_to_solve = unsolved_guesses.select{|guess| guess.attempts == least_attempts_num}.first
+
+    p next_to_solve
 
     if unsolved_guesses.size == 0
       return nil
