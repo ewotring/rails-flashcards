@@ -1,0 +1,71 @@
+body {
+  margin: 2%;
+  background-color: #999966;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+form input {
+  color: black;
+}
+
+a {
+  text-shadow: 1px 1px black;
+}
+
+a:visited{
+  color: rgb(255,218,185);
+}
+
+a:hover{
+  color: skyblue;
+}
+
+a:active{
+  color: red;
+}
+
+
+#logout-button {
+    background:none;
+    color:inherit;
+    border:none;
+    padding:0;
+    font: inherit;
+    color: white;
+    text-shadow: 1px 1px black;;
+}
+
+#logout-button:focus {
+  outline: none;
+}
+
+#logout-button:hover{
+  color: skyblue;
+}
+
+#logout-button:active{
+  color: red;
+}
+
+.deck-select{
+    background:none;
+    color:inherit;
+    border:none;
+    padding:0;
+    font: inherit;
+    color: white;
+    text-shadow: 1px 1px black;;
+}
+
+.deck-select:focus{
+  outline: none;
+}
+
+.deck-select:hover{
+  color: red;
+}
+
+.deck-select:active{
+  color: red;
+}
