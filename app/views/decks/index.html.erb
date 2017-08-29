@@ -7,3 +7,11 @@
     <% end %>
   </section>
 <% end %>
+
+<footer>
+  <% if logged_in? %>
+    <p><%= link_to "Logout", session_path(1), method: :delete %></p>
+  <% else %>
+    <p><%= link_to "Register", new_user_path %><br><%= link_to "Login", new_session_path %></p>
+  <% end %>
+</footer>

@@ -7,16 +7,17 @@ class SessionsController < ApplicationController
 
     if @user
       session[:user_id] = @user.id
-      redirect_to posts_path
+      redirect_to decks_path
     else
       @errors = "Incorrect email or password"
+      p "you failed to login"
       render :new
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to posts_path
+    redirect_to decks_path
   end
 
 end

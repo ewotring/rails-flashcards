@@ -1,8 +1,8 @@
-<% if @errors %>
-  <li><%= @errors %></li>
+<% if errors %>
+  <li><%= errors %></li>
 <% end %>
 
-<%= form_with url: new_session_path do |form| %>
+<%= form_with url: sessions_path do |form| %>
   <%= form.label :email %>
   <%= form.text_field :email %>
 
