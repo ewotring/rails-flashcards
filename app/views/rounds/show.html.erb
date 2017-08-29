@@ -1,0 +1,15 @@
+<% if logged_in? %>
+  <h2>Good job <%= @user.username %>! You completed the deck</h2>
+<% else %>
+   <h2>Good job! You completed the deck</h2>
+<% end %>
+
+<h4>Here's how you did:</h4>
+<ul>
+  <li>You successfully completed <%= @round.deck.cards.length %> questions</li>
+  <li>You answered with <%= @round.accuracy %>% accuracy</li>
+  <li>You answered <%= @round.solve_first_try_count %> of <%= @round.cards.size %> cards correctly on the first try</li>
+  <li>You submitted <%= @round.total_attempts %> total guesses before this deck was completed</li>
+</ul>
+
+<%= link_to 'Take me home', decks_path %>

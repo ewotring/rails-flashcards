@@ -4,8 +4,6 @@ class RoundsController < ApplicationController
     @round = Round.find(params[:id])
     @user = current_user
     @card = @round.next_unsolved_card
-    p '8' * 88
-    p @card
 
     if !@card
       render :show

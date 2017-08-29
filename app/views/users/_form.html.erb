@@ -1,0 +1,22 @@
+<%= form_with model: user, local: true do |form| %>
+  <% if user.errors.any? %>
+      <h4><em>The following prevented your account from being created:</em></h4>
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>
+
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.submit 'Create Account' %>
+
+<% end %>
