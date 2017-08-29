@@ -1,0 +1,6 @@
+
+<h3 style="white-space: pre-wrap"><%= @card.question %></h3>
+
+<h4> The correct answer was:</h4>
+<p><%= @card.answer %></p>
+<%= link_to 'Next Question', deck_round_path(@card.deck.id, @guess.round.id) %>
