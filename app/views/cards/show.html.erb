@@ -5,7 +5,7 @@
 <% if @attempted %>
   <h4> The correct answer was:</h4>
   <p><%= @card.answer %></p>
-  <%= link_to 'Next Question', @round %>
+  <%= link_to 'Next Question', deck_round_path(@deck.id, @round.id) %>
 <% else %>
   <%= form_with model: [@card, @guess] do |form| %>
     <%= form.label :answer %>
